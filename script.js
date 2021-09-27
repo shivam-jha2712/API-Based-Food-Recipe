@@ -11,6 +11,14 @@ recipeCloseBtn.addEventListener('click', () => {
 });
 
 
+//Enter key gives the search result #Event Listener Using Enter Key
+var input = document.getElementById("search-input");
+input.addEventListener("keyup", function (event) {
+    if (event.keyCode === 13) {
+        event.preventDefault();
+        document.getElementById("search-btn").click();
+    }
+});
 
 // get meal list that matches with the ingredients
 function getMealList() {
